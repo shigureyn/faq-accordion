@@ -69,7 +69,7 @@ svg {
   display: grid;
   place-items: center;
   padding-inline: clamp(1.5rem, 1.324rem + 0.75vw, 2rem);
-  padding-block: 2rem;
+  padding-block: clamp(2rem, 1.824rem + 0.75vw, 2.5rem);
   background-image: url("../images/background-pattern-mobile.svg");
   background-repeat: no-repeat;
   background-position: top center;
