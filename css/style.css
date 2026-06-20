@@ -20,6 +20,7 @@
   --color-purple-600: hsl(292, 16%, 49%);
   --color-purple-950: hsl(292, 42%, 14%);
   --color-purple-hover: hsl(281, 83%, 54%);
+  --color-shadow: hsl(292 42% 14% / 0.12);
 }
 
 *,
@@ -40,7 +41,7 @@ body {
   flex-direction: column;
   min-block-size: 100svh;
   font-family: "Work Sans", Arial, sans-serif;
-  font-size: 1rem;
+  font-size: clamp(1rem, 0.956rem + 0.1878vw, 1.125rem);
   font-weight: 400;
   line-height: 1.5;
   color: var(--color-purple-950);
@@ -63,10 +64,6 @@ svg {
   max-inline-size: 100%;
 }
 
-[hidden] {
-  display: none !important;
-}
-
 .page {
   flex: 1;
   display: grid;
@@ -85,7 +82,7 @@ svg {
   padding: clamp(1.5rem, 1.148rem + 1.5vw, 2.5rem);
   border-radius: clamp(0.5rem, 0.324rem + 0.75vw, 1rem);
   background-color: var(--color-white);
-  box-shadow: 0 2rem 3.5rem hsl(292 42% 14% / 0.12);
+  box-shadow: 0 2rem 4rem var(--color-shadow);
 }
 
 .faq-header {
@@ -175,7 +172,6 @@ svg {
 }
 
 .faq-answer__text {
-  font-size: 1rem;
   line-height: 1.5;
   color: var(--color-purple-600);
 }
